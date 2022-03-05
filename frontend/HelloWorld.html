@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BootCamp Project</title>
+    <style>
+        colorDivClass {
+            color: aqua;
+            font-size: x-large
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Hello World: Welcome to the grenqbit bootcamp</h1>
+    </header>
+
+    <div>
+        <div id="colorDiv" class="colorDivClass">Hello World Inside Div</div>
+        <hr/>
+        <button onclick="alert('HELLO');">Hello Button</button>
+        <button onclick="changeDivColour()">Change Div Color</button>
+
+        <div>
+            <a href="#">
+                <strong> Inside Div </strong>
+            </a>
+        </div>
+
+        <div>
+            Calculator
+            <input id="input1">
+            <input id="input2">
+            =
+            <input id="result" disabled>
+            &nbsp;&nbsp;
+            <button id="AddBtn" onclick="sum()"> Add Button</button>
+            <br/>
+            <strong id="error" style="color: red"></strong>
+        </div>
+    </div>
+
+    <footer style="margin-top: 70px">
+        All right reserve, GreenQbit Tech <span id="footerDate"></span>.
+    </footer>
+    <script>
+       var thisYear = new Date().getFullYear();
+       document.getElementById("footerDate").innerHTML=thisYear;
+    </script>
+
+    <script>
+        function sumation() {
+
+        }
+        const sumation1 = function () { //annonymous function
+
+        }
+        //lambada function
+        const sumatation2 = () => {
+
+        }
+
+        function controlStat() {
+            let x = 10;
+            while(x > 0) {
+                x--;
+            }
+
+        }
+
+        setTimeout(function (){
+            const retName = prompt('Enter your Name');
+            if ( retName != null) { //OK pressed
+                console.log(700, 'Dialog Return: ', retName); //cancel: null, ok : value
+            } else { //cancel pressed
+
+            }
+        }, 5000)
+
+
+    </script>
+    <script src="main.js" />
+
+</body>
+
+</html>

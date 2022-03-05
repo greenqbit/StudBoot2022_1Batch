@@ -1,0 +1,26 @@
+version: '3.3'
+# comment: docker-compose up -d
+# if file name is diff: docker-compose -f filename.yml up -d
+services:
+  postgres:
+    container_name: pg-docker
+    restart: unless-stopped
+    environment:
+      - POSTGRES_PASSWORD=postgresql
+    ports:
+      - '5432:5432'
+    volumes:
+      - '$HOME/docker/volumes/postgres:/var/lib/postgresql/data'
+    image: postgres
+  mongodb:
+    image: 'mongo'
+    #restart: unless-stopped
+    container_name: 'my-mongo-container' # give your contatner a name
+    environment:
+      - MONGO_INITDB_DATABASE=mongo-db1 # database name you want to make
+      - MONGO_INITDB_ROOT_USERNAME=mongodb # set your container root username
+      - MONGO_INITDB_ROOT_PASSWORD=mongodb. # set your contatner root password
+    volumes:
+      - '$HOME/docker/volumes/mongodb:/var/lib/mongodb/data'
+    ports:
+      - 27017:27017
