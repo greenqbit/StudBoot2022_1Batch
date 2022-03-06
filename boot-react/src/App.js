@@ -1,6 +1,7 @@
 import GNavBar from "./components/GNavBar";
 import GDialog from "./components/GDialog";
 import TodoApp from "./components/TodoApp";
+import {TodoAppFuncV2} from "./components/TodoAppFuncV2";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
 
             <strong>TODO APP</strong>
             <TodoApp />
+
+            <TodoAppFuncV2 />
 
 
         </div>

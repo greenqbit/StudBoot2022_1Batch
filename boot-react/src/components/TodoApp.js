@@ -1,6 +1,9 @@
 import React from 'react';
 import {Badge, Button} from "react-bootstrap";
 
+//TODO 1: Extract ITEM To separate componet, demonstrate steate uplifting with calling parent method, state
+// TODO 2: Do same thing with functional component
+// TODO 3: Life cycle in the class component(componetDidMount) , and Function componetn(useEffect)
 class TodoApp extends React.Component {
 
     //1. React Hook can't be used inside the class component
@@ -102,7 +105,7 @@ class TodoApp extends React.Component {
                     <label>What needs to be done?</label> <br/>
                     <input id="new-todo" value={this.state.text} onChange={this.handleChange} /> <br/>
                     <Button variant={"info"} onClick={this.handleSubmit}>
-                        Add <Badge bg="primary" pill>14</Badge>
+                        Add <Badge bg="primary" pill>{this.state.items.filter(item => !item.completed).length}</Badge>
                     </Button>
                 </form>
             </div>
