@@ -13,6 +13,7 @@ export const TodoAppFuncV2 = () => {
     };
     //IMP: useState ie HOOK can be only used inside functional component
     const [todoState, setTodoState] = useState(oriValue)
+    const [completed, setCompleted] = useState([])
 
     function handleChange(e) {
        //DONT DO THIS: IMMUTABLE, can't modify state todoState.text  = 'ABC'

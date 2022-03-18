@@ -2,6 +2,8 @@ import GNavBar from "./components/GNavBar";
 import GDialog from "./components/GDialog";
 import TodoApp from "./components/TodoApp";
 import {TodoAppFuncV2} from "./components/TodoAppFuncV2";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDollar } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
   return (
@@ -10,7 +12,7 @@ function App() {
 
         <div id="bodyDiv">
             <h1> I am a body.</h1>
-            <GDialog buttonName={'Lunch Button Top 1'}/>
+            <GDialog buttonName={'Lunch Button Top 1'} />
             <hr />
             <strong>NOW TESTING GDialog 2nd Dialog</strong>
             <br/>
@@ -22,11 +24,14 @@ function App() {
 
             <TodoAppFuncV2 />
 
+            <hr/>
+
+
 
         </div>
 
         <div id="footerDiv" style={{marginTop: '100px', color: 'green'}}>
-            All right reserve @2022, <strong>GreenQbit Technology.</strong>
+            All right reserve @2022 <FontAwesomeIcon icon={faDollar} size="2x"/>, <strong>GreenQbit Technology.</strong>
         </div>
 
     </div>
