@@ -5,13 +5,11 @@ import com.greenqbit.StudMBoot2021.entity.Student;
 import com.greenqbit.StudMBoot2021.service.StudentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins="*")
 @RequiredArgsConstructor
 @RestController //rest API
 @RequestMapping("/api")

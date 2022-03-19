@@ -10,6 +10,29 @@ import {
 } from '@chakra-ui/react';
 
 export default function HomeBodyCallToActionWithIllustration() {
+    //What we are learning? CallBack
+    function saveData(data: any, callBackFunc: () => void ) {
+        //3 second
+        setTimeout(() => {
+            console.log(1, 'Saving Data to db', data)
+            //gurranty that data is saved
+            callBackFunc()
+        }, 3000)
+        console.log(1, 'end of saveData function...')
+    }
+
+    //onClick={() => getStartedClick({firstName: 'Ryan', country: 'Australia'})}
+    function getStartedClick(data: any) {
+        saveData(data, () => {
+           //callback return: Solution callback
+           console.log('FINALLY: Data is saved, I can gurranty, 3sec is alreayd over')
+        })
+        //Gurrenty that data is saved ??
+        //After saving data  => Acknowledge in the screen
+        console.log('FALSE ALARAM: Data is saved, I can gurranty, 3sec is alreayd over')
+
+    }
+
     return (
         <Container maxW={'5xl'}>
             <Stack
@@ -37,7 +60,9 @@ export default function HomeBodyCallToActionWithIllustration() {
                         px={6}
                         colorScheme={'orange'}
                         bg={'orange.400'}
-                        _hover={{ bg: 'orange.500' }}>
+                        _hover={{ bg: 'orange.500' }}
+                        onClick={() => getStartedClick({firstName: 'Ryan', country: 'Australia'})}
+                    >
                         Get started
                     </Button>
                     <Button rounded={'full'} px={6}>

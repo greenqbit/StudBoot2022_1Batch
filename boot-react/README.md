@@ -26,6 +26,8 @@ till then you learn, what is export, const, let, destructoring, props, state, ev
 
 10. Then make Chakra UI demo with react router, typescript we could use and teach.
 Aovid duplicate teaching on both project :) 
+carosel, home, statistics, axios, formick , now fetch stud record from db in useEffect.
+11. hoc with callback, promise, api
 
 
 
