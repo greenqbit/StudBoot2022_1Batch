@@ -11,17 +11,12 @@ import {
 } from "@chakra-ui/react";
 import axios from "axios";
 import {
-    BsDiamond,
-    BsPerson,
-} from "react-icons/bs";
-import {
     FiDollarSign,
     FiLoader,
 } from "react-icons/fi";
 import {
     FaBitcoin
 } from "react-icons/fa";
-import {BiLoader} from "react-icons/all";
 
 /**
  * {
@@ -35,16 +30,6 @@ import {BiLoader} from "react-icons/all";
  *  }
  *  }
  */
-const emptyRateDate = {
-    rates: {
-        btc: {
-            name: "Bitcoin",
-            unit: "BTC",
-            value: 1,
-            type: "crypto"
-        }
-    }
-}
 
 interface ExValue {
     name: string
@@ -59,12 +44,12 @@ type ExRateRates = {
 
 //use this for response.data
 type ExRate = {
-    rates?: Map<string, ExValue>
+    rates: Record<string, ExValue>
 }
 
 export default function CryptoExRate() {
 
-    const [exchangeRate, setExchangeRate] = useState<ExRate>({})
+    const [exchangeRate, setExchangeRate] = useState<ExRate>()
 
     function fetchExRate() {
         axios.get('https://api.coingecko.com/api/v3/exchange_rates')
@@ -101,17 +86,15 @@ export default function CryptoExRate() {
     console.log(1, 'state exchangeRate: ', exchangeRate)
 
     //Learning: How to convert Json Object {} to Array type []
-    // @ts-ignore
-    const DiamonComp = () => <FaBitcoin size={'3em'} />
+    const DiamondComp = () => <FaBitcoin size={'3em'} />
     const DollarComp = () => <FiDollarSign size={'3em'} />
     const exRatesComp = exchangeRate?.rates && Object.keys(exchangeRate.rates).map((rateKey, index) => {
-        // @ts-ignore
         const rateValue = exchangeRate.rates[rateKey]
         return (
             <StatsCard key={index + rateValue.name}
                 title={`${rateValue.name} : ${rateValue.unit}`}
                 stat={rateValue.value}
-                icon={rateValue.type === 'crypto' ? <DiamonComp /> : <DollarComp /> }
+                icon={rateValue.type === 'crypto' ? <DiamondComp /> : <DollarComp /> }
             />
         )
     })
@@ -138,7 +121,7 @@ export default function CryptoExRate() {
 
 interface StatsCardProps {
     title: string;
-    stat: string;
+    stat: string | number;
     icon: ReactNode;
 }
 function StatsCard(props: StatsCardProps) {
