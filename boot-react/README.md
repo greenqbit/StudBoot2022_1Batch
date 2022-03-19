@@ -29,6 +29,6 @@ Aovid duplicate teaching on both project :)
 carosel, home, statistics, axios, formick , now fetch stud record from db in useEffect.
 11. hoc with callback, promise, api
 
-
+React-Redux, 
 
 
