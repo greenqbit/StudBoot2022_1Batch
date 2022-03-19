@@ -31,6 +31,7 @@ import {
     FiMenu,
     FiBell,
     FiChevronDown,
+    FiDollarSign
 } from 'react-icons/fi';
 import { IconType } from 'react-icons';
 import { ReactText } from 'react';
@@ -44,7 +45,7 @@ interface LinkItemProps {
 const LinkItems: Array<LinkItemProps> = [
     { name: 'Home', icon: FiHome, url: '/' },
     { name: 'Trending', icon: FiTrendingUp, url: '/trending' },
-    { name: 'Explore', icon: FiCompass, url: '/explore' },
+    { name: 'ExRate', icon: FiDollarSign, url: '/exrate' },
     { name: 'Favourites', icon: FiStar, url: '/favourites' },
     { name: 'Settings', icon: FiSettings, url: '/settings' },
 ];

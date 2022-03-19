@@ -16,6 +16,7 @@ import HomeBodyCallToActionWithIllustration from "./components/homeBody";
 import GFooterLargeWithAppLinksAndSocial from "./components/GFooter";
 import { Routes, Route } from "react-router-dom";
 import GBasicStatistics from "./components/GStatistics";
+import CryptoExRate from "./components/CryptoExRate";
 
 export const App = () => (
   <ChakraProvider theme={theme}>
@@ -29,6 +30,7 @@ export const App = () => (
           <Routes>
             <Route path="/" element={<HomeBodyCallToActionWithIllustration />} />
             <Route path="/trending" element={<GBasicStatistics />} />
+            <Route path="/exrate" element={<CryptoExRate />}/>
           </Routes>
 
         </SidebarWithHeader>
