@@ -19,6 +19,28 @@ export function Counter() {
 
   const status = useSelector((state) => state.counter.status)
   console.log(1, 'test: ', status)
+
+  //CURRY FUnction: functional programming patter, function inside function, lamba(lamda)
+  //Closure*
+  const showStud = (name, collegeName) => {
+    console.log(1, 'Stud Info:', name, collegeName)
+  }
+  showStud('Aman', 'NSW College')
+  showStud('Santosh', 'NSW College')
+
+  const showStudCurry = (collegeName) => { //closure *
+    return (name) => {
+      console.log(2, 'Stud Info:', name, collegeName)
+    }
+  }
+  const showStudCurryV2 = collegeName => name => console.log(2, 'Stud Info:', name, collegeName)
+  const studNameFunc = showStudCurryV2('NSW College') //we shoudl send
+  //Automatic
+  studNameFunc('Aman')
+  studNameFunc('Santosh')
+
+
+
   return (
     <div>
       <div className={styles.row}>

@@ -34,6 +34,7 @@ Terminology: store, actions, action creator, reducer, middleware,
 pure functions, immutability, thunk, slicer,
 state, action, reduce, dispatch(action), 
 mapStateToProps, connect => data flow, action as a props
+curry function
 
 
 
