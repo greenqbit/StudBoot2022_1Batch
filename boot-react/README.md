@@ -29,6 +29,11 @@ Aovid duplicate teaching on both project :)
 carosel, home, statistics, axios, formick , now fetch stud record from db in useEffect.
 11. hoc with callback, promise, api
 
-React-Redux, 
+React-Redux, redux-thunk, redux-toolkit, react context api:
+Terminology: store, actions, action creator, reducer, middleware,
+pure functions, immutability, thunk, slicer,
+state, action, reduce, dispatch(action), 
+mapStateToProps, connect => data flow, action as a props
+
 
 
